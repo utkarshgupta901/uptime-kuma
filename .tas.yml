@@ -8,6 +8,7 @@ preRun:
     - npm i
     - npm run build
     - node test/prepare-jest.js
+    - export TEST_BACKEND=1
 
 postMerge:
   pattern:
@@ -17,7 +18,7 @@ preMerge:
   pattern:
     - "test/*.spec.js"
 
-
+configFile: "./config/jest-backend.config.js"
 # configure whether to smartSelect test-cases. Default true
 smartRun: true
 
