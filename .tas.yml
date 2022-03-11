@@ -12,10 +12,6 @@ preRun:
 postMerge:
   pattern:
     - "test/*.spec.js"
-  # strategy for trigerring builds for post-merge
-  strategy:
-    threshold: 1
-    name: after_n_commits
 
 preMerge:
   pattern:
